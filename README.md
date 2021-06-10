@@ -56,17 +56,17 @@ ProjectName and Description
 
 ### 上手指南
 
-lab 主页：http://csapp.cs.cmu.edu/3e/labs.html
-课件下载地址 http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/schedule.html
-视频地址：哔哩哔哩搜索csapp可得，由于资源经常更换，在此的固定连接地址就不提供了
+- lab 主页：http://csapp.cs.cmu.edu/3e/labs.html
+- 课件下载地址 http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/schedule.html
+- 视频地址：哔哩哔哩搜索csapp可得，由于资源经常更换，在此的固定连接地址就不提供了
 
 
 
-###### 开发前的配置要求
+### 开发前的配置要求
 
 1. Windows 环境（需要配置好docker）或者Linux服务器
 
-###### **安装步骤**
+#### **安装步骤**
 - Windows
 
   - 利用容器
