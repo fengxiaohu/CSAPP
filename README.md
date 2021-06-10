@@ -135,22 +135,11 @@ sudo apt-get install gcc-multilib
 eg:
 
 ```
-filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
-├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
+.
+├── datalab-handout
+├── datalab-handout.tar
+├── LICENSE
+└── README.md
 
 ```
 
