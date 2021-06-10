@@ -16,7 +16,7 @@ ProjectName and Description
 <br />
 
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
+  <a href="https://github.com/fengxiaohu/CSAPP/CSAPP/">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -24,14 +24,14 @@ ProjectName and Description
   <p align="center">
     一个"完美的"README模板去快速开始你的项目！
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/fengxiaohu/CSAPP/CSAPP"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
+    <a href="https://github.com/fengxiaohu/CSAPP/CSAPP">查看Demo</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">报告Bug</a>
+    <a href="https://github.com/fengxiaohu/CSAPP/CSAPP/issues">报告Bug</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a>
+    <a href="https://github.com/fengxiaohu/CSAPP/CSAPP/issues">提出新特性</a>
   </p>
 
 </p>
@@ -56,23 +56,80 @@ ProjectName and Description
 
 ### 上手指南
 
-请将所有链接中的“shaojintian/Best_README_template”改为“your_github_name/your_repository”
+lab 主页：http://csapp.cs.cmu.edu/3e/labs.html
+课件下载地址 http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/schedule.html
+视频地址：哔哩哔哩搜索csapp可得，由于资源经常更换，在此的固定连接地址就不提供了
 
 
 
 ###### 开发前的配置要求
 
-1. xxxxx x.x.x
-2. xxxxx x.x.x
+1. Windows 环境（需要配置好docker）或者Linux服务器
 
 ###### **安装步骤**
+- Windows
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+  - 利用容器
 
-```sh
-git clone https://github.com/shaojintian/Best_README_template.git
+如何安装docker，并更新软件源(国内由于网络环境问题需要更换源，否则速度非常慢)：可以参考这里 
+
+[]: https://yeasy.gitbook.io/docker_practice/install
+
+在dockre hub可以直接拉取配置好的镜像，例如 yansongsongsong/csapp
+
 ```
+docker pull yansongsongsong/csapp
+```
+
+或者自己从Ubuntu镜像的容器开始构建。从Ubuntu镜像中创建容器，命名为`csapp_env`，且将本地文件夹`/Users/ryan/Desktop/Lab`挂载到`/csapp`文件夹目录下，我们的实验文件夹也是下载在这里。资源通过该文件夹和容器共享
+
+```shell
+docker pull ubuntu:18.04
+```
+
+```shell
+docker container run -it -v /Users/ryan/Desktop/Lab:/
+csapp --name=csapp_env ubuntu:18.04 /bin/bash
+```
+
+```shell
+apt-get update
+apt-get install sudo
+sudo apt-get install build-essential
+sudo apt-get install gcc-multilib
+sudo apt-get install gdb
+```
+
+- 利用虚拟机
+
+挂载好Ubuntu镜像，然后分别执行
+
+```shell
+apt-get update
+sudo apt-get install build-essential
+sudo apt-get install gcc-multilib
+```
+
+
+
+- 利用WSL(windows for linux)
+
+
+- Ubuntu
+
+```
+apt-get update
+sudo apt-get install build-essential
+sudo apt-get install gcc-multilib
+```
+
+
+
+### Mac OS
+
+
+### 
+
 
 ### 文件目录说明
 eg:
@@ -103,7 +160,7 @@ filetree
 
 ### 开发的架构 
 
-请阅读[ARCHITECTURE.md](https://github.com/shaojintian/Best_README_template/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
+请阅读[ARCHITECTURE.md](https://github.com/fengxiaohu/CSAPP/CSAPP/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
 
 ### 部署
 
@@ -146,7 +203,7 @@ xxx@xxxx
 
 ### 版权说明
 
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/fengxiaohu/CSAPP/CSAPP/blob/master/LICENSE.txt)
 
 ### 鸣谢
 
@@ -159,17 +216,17 @@ xxx@xxxx
 - [xxxxxxxxxxxxxx](https://connoratherton.com/loaders)
 
 <!-- links -->
-[your-project-path]:shaojintian/Best_README_template
-[contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
-[contributors-url]: https://github.com/shaojintian/Best_README_template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/shaojintian/Best_README_template.svg?style=flat-square
-[forks-url]: https://github.com/shaojintian/Best_README_template/network/members
-[stars-shield]: https://img.shields.io/github/stars/shaojintian/Best_README_template.svg?style=flat-square
-[stars-url]: https://github.com/shaojintian/Best_README_template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg
-[license-shield]: https://img.shields.io/github/license/shaojintian/Best_README_template.svg?style=flat-square
-[license-url]: https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt
+[your-project-path]:fengxiaohu/CSAPP/CSAPP
+[contributors-shield]: https://img.shields.io/github/contributors/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
+[contributors-url]: https://github.com/fengxiaohu/CSAPP/CSAPP/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
+[forks-url]: https://github.com/fengxiaohu/CSAPP/CSAPP/network/members
+[stars-shield]: https://img.shields.io/github/stars/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
+[stars-url]: https://github.com/fengxiaohu/CSAPP/CSAPP/stargazers
+[issues-shield]: https://img.shields.io/github/issues/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/fengxiaohu/CSAPP/CSAPP.svg
+[license-shield]: https://img.shields.io/github/license/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
+[license-url]: https://github.com/fengxiaohu/CSAPP/CSAPP/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/shaojintian
 
