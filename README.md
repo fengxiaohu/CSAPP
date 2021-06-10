@@ -16,7 +16,7 @@ ProjectName and Description
 <br />
 
 <p align="center">
-  <a href="https://github.com/fengxiaohu/CSAPP/CSAPP/">
+  <a href="https://github.com/fengxiaohu/CSAPP/">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -24,14 +24,14 @@ ProjectName and Description
   <p align="center">
     一个"完美的"README模板去快速开始你的项目！
     <br />
-    <a href="https://github.com/fengxiaohu/CSAPP/CSAPP"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/fengxiaohu/CSAPP"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/fengxiaohu/CSAPP/CSAPP">查看Demo</a>
+    <a href="https://github.com/fengxiaohu/CSAPP">查看Demo</a>
     ·
-    <a href="https://github.com/fengxiaohu/CSAPP/CSAPP/issues">报告Bug</a>
+    <a href="https://github.com/fengxiaohu/CSAPP/issues">报告Bug</a>
     ·
-    <a href="https://github.com/fengxiaohu/CSAPP/CSAPP/issues">提出新特性</a>
+    <a href="https://github.com/fengxiaohu/CSAPP/issues">提出新特性</a>
   </p>
 
 </p>
@@ -149,7 +149,7 @@ eg:
 
 ### 开发的架构 
 
-请阅读[ARCHITECTURE.md](https://github.com/fengxiaohu/CSAPP/CSAPP/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
+请阅读[ARCHITECTURE.md](https://github.com/fengxiaohu/CSAPP/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
 
 ### 部署
 
@@ -192,7 +192,7 @@ xxx@xxxx
 
 ### 版权说明
 
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/fengxiaohu/CSAPP/CSAPP/blob/master/LICENSE.txt)
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/fengxiaohu/CSAPP/blob/master/LICENSE.txt)
 
 ### 鸣谢
 
@@ -205,17 +205,17 @@ xxx@xxxx
 - [xxxxxxxxxxxxxx](https://connoratherton.com/loaders)
 
 <!-- links -->
-[your-project-path]:fengxiaohu/CSAPP/CSAPP
-[contributors-shield]: https://img.shields.io/github/contributors/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
-[contributors-url]: https://github.com/fengxiaohu/CSAPP/CSAPP/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
-[forks-url]: https://github.com/fengxiaohu/CSAPP/CSAPP/network/members
-[stars-shield]: https://img.shields.io/github/stars/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
-[stars-url]: https://github.com/fengxiaohu/CSAPP/CSAPP/stargazers
-[issues-shield]: https://img.shields.io/github/issues/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/fengxiaohu/CSAPP/CSAPP.svg
-[license-shield]: https://img.shields.io/github/license/fengxiaohu/CSAPP/CSAPP.svg?style=flat-square
-[license-url]: https://github.com/fengxiaohu/CSAPP/CSAPP/blob/master/LICENSE.txt
+[your-project-path]:fengxiaohu/CSAPP
+[contributors-shield]: https://img.shields.io/github/contributors/fengxiaohu/CSAPP.svg?style=flat-square
+[contributors-url]: https://github.com/fengxiaohu/CSAPP/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/fengxiaohu/CSAPP.svg?style=flat-square
+[forks-url]: https://github.com/fengxiaohu/CSAPP/network/members
+[stars-shield]: https://img.shields.io/github/stars/fengxiaohu/CSAPP.svg?style=flat-square
+[stars-url]: https://github.com/fengxiaohu/CSAPP/stargazers
+[issues-shield]: https://img.shields.io/github/issues/fengxiaohu/CSAPP.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/fengxiaohu/CSAPP.svg
+[license-shield]: https://img.shields.io/github/license/fengxiaohu/CSAPP.svg?style=flat-square
+[license-url]: https://github.com/fengxiaohu/CSAPP/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/shaojintian
 
