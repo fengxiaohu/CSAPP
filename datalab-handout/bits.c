@@ -193,7 +193,7 @@ int allOddBits(int x) {
  *   Rating: 2
  */
 int negate(int x) {
-  return 2;
+  return (~x + 1);
 }
 //3
 /* 
@@ -206,7 +206,14 @@ int negate(int x) {
  *   Rating: 3
  */
 int isAsciiDigit(int x) {
-  return 2;
+  int high_4digit =!(x >>4 & 0x3);// high 4bit must be 0b 0011
+  int low_4digit = !(x & 0xf); // low bit can be 0000~1001
+  int target = (low_4digit >> 3) & 0x1;// x in [0x30,0x37]
+  int is_0x38 = low_4digit ^ 0x8;
+  int is_0x39 = low_4digit ^ 0x9;
+  return (!(!high_4digit))&(!!target | (!target & is_0x39) |(!target & is_0x38));
+
+   
 }
 /* 
  * conditional - same as x ? y : z 
