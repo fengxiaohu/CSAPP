@@ -193,7 +193,9 @@ int allOddBits(int x) {
  *   Rating: 2
  */
 int negate(int x) {
-  return 2;
+  
+  
+  return (~x+1);
 }
 //3
 /* 
@@ -205,8 +207,14 @@ int negate(int x) {
  *   Max ops: 15
  *   Rating: 3
  */
+ // 0x30 == 0b01100000
+ // 0x39 == 0b01101001
 int isAsciiDigit(int x) {
-  return 2;
+  switch(x)
+  {
+    int high_bits = !(x>>4)^0x3;
+    
+  }
 }
 /* 
  * conditional - same as x ? y : z 
