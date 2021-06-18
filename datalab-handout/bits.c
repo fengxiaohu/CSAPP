@@ -211,13 +211,12 @@ int negate(int x) {
  // 0x39 == 0b01101001
 int isAsciiDigit(int x) {
 
-  int is_high_4digit_0x3 =!(x >>4 ^ 0x3);// high 4bit must be 0b 0011
-  int low_4digit = x & 0xf; // low bit can be 0000~1001
-  int target = !(low_4digit^0x8);// x in [0x30,0x37] and target must be 0
-  int is_0x38 = !target &(!(low_4digit ^ 0x8));
+  int is_high_4digit_0x3 =!((x >>4 )^ 0x3);// high 4bit must be 0b 0011
+  int low_4digit = x & 0x0f; // low bit can be 0000~1001
+  int target = (low_4digit>>3)^1;// x in [0x30,0x37] and target must be 0
+  int is_0x38 = !(low_4digit ^ 0x8);
   int is_0x39 = !(low_4digit ^ 0x9);
-  return (is_high_4digit_0x3 &(target | is_0x38 | is_0x39));
-
+  return (is_high_4digit_0x3 &((target) | is_0x38 | is_0x39));
 }
 /* 
  * conditional - same as x ? y : z 
@@ -226,8 +225,19 @@ int isAsciiDigit(int x) {
  *   Max ops: 16
  *   Rating: 3
  */
+// x != 0: mask should be 0xffffffff,return mask & y
+// x == 0: mask should be 0x00000000,return ~mask & y
 int conditional(int x, int y, int z) {
-  return 2;
+  
+  int mask = !!x;
+  
+  mask = mask + (mask<<1);
+  mask = mask + (mask <<2);
+  mask = mask + (mask <<4);//mask == 0xff  
+  mask = mask + (mask <<8);// mask == 0xffff
+  mask = mask + (mask << 16);// mask ==0xffffffff
+  
+  return (mask&y) | ((~mask)&z);
 }
 /* 
  * isLessOrEqual - if x <= y  then return 1, else return 0 
@@ -237,7 +247,28 @@ int conditional(int x, int y, int z) {
  *   Rating: 3
  */
 int isLessOrEqual(int x, int y) {
-  return 2;
+  /*
+  x = 0x7fffffff;
+  y = 0x80000000;
+  */
+  int res = x + (~y+1);
+  int sign_bit_x = !!(x>> 31)^0;
+  int sign_bit_y = !!(y >> 31)^0;
+  int flag1 =  sign_bit_x & (!sign_bit_y);
+  int t = x^y;
+  int flag2 = (~t) & res;
+  return (flag1 | ((flag2)>>31) & 1) | (!t);
+  
+ /*
+  int sign_bit_x = !!(x>> 31)^0;
+  int sign_bit_y = !!(y >> 31)^0;
+  int positive_y_negative_x = sign_bit_x | (!sign_bit_y);
+  int same_sign_xy = !(sign_bit_x ^ sign_bit_y);
+  int y_minus_x =  (y+(~x)+1);
+  int x_equal_y = !y_minus_x;
+  
+  return positive_y_negative_x | x_equal_y | (same_sign_xy &(!!y_minus_x));
+*/
 }
 //4
 /* 
@@ -249,7 +280,13 @@ int isLessOrEqual(int x, int y) {
  *   Rating: 4 
  */
 int logicalNeg(int x) {
-  return 2;
+  int minus_x = ~x+1;
+  int sign_bit_x = (x>> 31)^0;
+  int sign_bit_minus_x = (minus_x>> 31)^0;
+  int is_t_min =  (sign_bit_x ^ sign_bit_minus_x)&(x>>31)^0;
+  
+  
+  return (!is_t_min)|sign_bit_x ^ sign_bit_minus_x;
 }
 /* howManyBits - return the minimum number of bits required to represent x in
  *             two's complement
