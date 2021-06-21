@@ -283,10 +283,10 @@ int logicalNeg(int x) {
   int minus_x = ~x+1;
   int sign_bit_x = (x>> 31)^0;
   int sign_bit_minus_x = (minus_x>> 31)^0;
-  int is_t_min =  (sign_bit_x ^ sign_bit_minus_x)&(x>>31)^0;
+  //int is_t_min =  ((sign_bit_x ^ sign_bit_minus_x)&(x>>31))^0;
   
   
-  return (!is_t_min)|sign_bit_x ^ sign_bit_minus_x;
+  return (!sign_bit_minus_x &(!sign_bit_x));
 }
 /* howManyBits - return the minimum number of bits required to represent x in
  *             two's complement
