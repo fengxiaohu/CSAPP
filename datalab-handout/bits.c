@@ -367,12 +367,13 @@ unsigned floatScale2(unsigned uf) {
  *   Rating: 4
  */
 int floatFloat2Int(unsigned uf) {
+  //uf = 0x0;
   int sign = uf >>31;
-  int exp = (uf >> 23) & 0xff;
+  int exp = ((uf >> 23) & 0xff);
   int frac = uf & 0x7fffff;
   int E = exp-127;
-  if(E > 31 ) return 0x80000000u;
-  else if(E<=0) return 0;
+  if(E > 31) return 0x80000000u;
+  else if(E<0) return 0;
   else
   {
     frac = frac | (1<<23);
@@ -402,5 +403,23 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
-    return 2;
+  if (x > 127) //too large, return +INF
+  {
+    return (0xFF << 23);
+  }
+  else if (x < -148) //too small, return 0
+  {
+    return 0;
+  }
+  else if (x >= -126) //norm，计算exp
+  {
+    int exp = x + 127;
+    return (exp << 23);
+  }
+  else //denorm，令frac中某一位为1
+  {
+    int t = 148 + x;
+    return (1 << t);
+  }
+
 }
